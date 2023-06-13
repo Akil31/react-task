@@ -11,6 +11,9 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    console.log({username, password});
+
     try {
       const response = await apiService.login(username, password);
       console.log(response.data); // Handle the successful login response
@@ -49,12 +52,12 @@ const LoginForm = () => {
               <h2 class="h1 fw-bold mb-4 pt-5 pt-md-0">Login</h2>
               <hr class="hr" style={{ border: '1px solid #257fac;' }} />
             </div>
-            <form class="g3 needs-validation">
+            <form class="g3 needs-validation" onSubmit={handleSubmit}>
 
 
               <div class="form-floating mb-4">
                 <input type="text" id="form3Example3" formControlName="username"
-                  class="form-control form-control-lg" placeholder="Enter a valid user name" />
+                  class="form-control form-control-lg" placeholder="Enter a valid user name" onChange={(e)=>setUsername(e?.currentTarget?.value)} />
                 <label class="form-label" for="form3Example3">User Name</label>
                 <div class="error"
                 >
@@ -62,7 +65,7 @@ const LoginForm = () => {
               </div>
 
               <div class="form-floating mb-3">
-                <input type="password" id="form3Example4" formControlName="password" class="form-control form-control-lg"
+                <input type="password" id="form3Example4" onChange={(e)=>setPassword(e?.currentTarget?.value)} formControlName="password" class="form-control form-control-lg"
                   placeholder="Enter password" />
                 <label class="form-label" for="form3Example4">Password</label>
                 <div class="error"

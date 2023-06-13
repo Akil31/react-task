@@ -7,7 +7,7 @@ export default function VideoCall() {
             <div class="container-fluid">
                 <div class="row d-flex">
                     <div class="col-12 col-md-8">
-                        <div class="bg-image d-flex  w-100 h-100"
+                        <div class="bg-image align-items-center w-100 vh-100"
                             style={{backgroundImage: `url('./images/video.png')`,height: '450px;'}}>
                             <div class="text-white text-start title btn-green" style={{alignSelf: 'flex-end;width: -webkit-fill-available',height:' 60px;'}}>
                                 <div class="p-2" style={{textAlign: '-webkit-center;'}}>
@@ -141,8 +141,8 @@ export default function VideoCall() {
                     </div>
                 </div>
 
-            </div>
-        </div>
-
+        //     </div>
+        // </div>
+// </div>
     )
 }

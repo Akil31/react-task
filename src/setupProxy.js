@@ -4,12 +4,12 @@ module.exports = function(app) {
     try{
        app.use(
            '/api',
-           proxy({
-             target: 'http://localhost:3001',
+           createProxyMiddleware({
+             target: 'https://ahd.instapract.com/web',
              changeOrigin: true
            })
          )
-    }
+             }
     catch(err){
        console.log(err.message);
     }
