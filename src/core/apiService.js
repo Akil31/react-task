@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://ahd.instapract.com/web/api/default/login';
+const API_BASE_URL = 'https://ahd.instapract.com/web/';
 
 const apiService = axios.create({
   baseURL: API_BASE_URL,
@@ -10,7 +10,7 @@ const apiServiceInstance = {
   // Define your API service functions here
   login: async (username, password) => {
     try {
-      const response = await axios.post('/api/default/login', { username, password });
+      const response = await apiService.post('/api/default/login', { username, password });
       return response.data;
     } catch (error) {
       throw error;

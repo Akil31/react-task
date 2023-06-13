@@ -11,9 +11,9 @@ const AppRouter = () => {
   return (
     <Router>
       <Switch>
-        {/* <Route exact path="/" component={LoginForm} />
-        <Route path="/crud" component={CrudComponent} /> */}
-        <VideoCall/>
+        <Route exact path="/" component={LoginForm} />
+        <Route path="/crud" component={CrudComponent} />
+        {/* <VideoCall/> */}
         {/* <Videocalltest/>
         <Navg/>
         <Dashboard/> */}
