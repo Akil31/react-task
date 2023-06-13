@@ -12,7 +12,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log({username, password});
+    console.log({ username, password });
 
     try {
       const response = await apiService.login(username, password);
@@ -38,11 +38,6 @@ const LoginForm = () => {
                 Opnion Platform.</h1>
             </div>
 
-            {/* <form onSubmit={handleSubmit}>
-              <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-              <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-              <button className="btn btn-primary" type="submit">Login</button>
-            </form> */}
           </div>
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             <div class="text-start py-4">
@@ -57,20 +52,13 @@ const LoginForm = () => {
 
               <div class="form-floating mb-4">
                 <input type="text" id="form3Example3" formControlName="username"
-                  class="form-control form-control-lg" placeholder="Enter a valid user name" onChange={(e)=>setUsername(e?.currentTarget?.value)} />
+                  class="form-control form-control-lg" placeholder="Enter a valid user name" onChange={(e) => setUsername(e?.currentTarget?.value)} />
                 <label class="form-label" for="form3Example3">User Name</label>
-                <div class="error"
-                >
-                  Username is required</div>
               </div>
-
               <div class="form-floating mb-3">
-                <input type="password" id="form3Example4" onChange={(e)=>setPassword(e?.currentTarget?.value)} formControlName="password" class="form-control form-control-lg"
+                <input type="password" id="form3Example4" onChange={(e) => setPassword(e?.currentTarget?.value)} formControlName="password" class="form-control form-control-lg"
                   placeholder="Enter password" />
                 <label class="form-label" for="form3Example4">Password</label>
-                <div class="error"
-                >
-                  Password is required</div>
 
               </div>
 
@@ -82,18 +70,15 @@ const LoginForm = () => {
                     Remember me
                   </label>
                 </div>
-                <a href="#!" class="text-body">Forgot password?</a>
               </div>
 
               <div class="text-center text-lg-start mt-4 pt-2">
                 <button type="submit" class="btn btn-green btn-lg w-100"
-                 style={{
-                  paddingLeft: '2.5rem;', paddingRight: ' 2.5rem;',
-                  color: 'white', backgroundColor: '#338BA8'
-              }}>Login</button>
-                <div class="error">
-                  <div>Invalid credentials.</div>
-                </div>
+                  style={{
+                    paddingLeft: '2.5rem;', paddingRight: ' 2.5rem;',
+                    color: 'white', backgroundColor: '#338BA8'
+                  }}>Login</button>
+
               </div>
 
             </form>

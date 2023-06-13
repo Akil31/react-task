@@ -9,7 +9,7 @@ export default function Videocalltest() {
                 </div>
                 <div class="container">
                     <div class="card bg-dark" style={{ height: ' 175px' }}>
-                        oiuytfrd
+
                     </div>
                     <div class="text-center">
                         <h5 class="pt-3">Please wait while we check your camera</h5>

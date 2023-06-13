@@ -2,23 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
 import CrudComponent from './components/CrudComponent';
-import Dashboard from './components/Dashboard';
-import Navg from './components/Navg';
 import Videocalltest from './components/Videocalltest';
-import VideoCall from './components/Videocall';
-
+import Videocall from './components/Videocall';
 const AppRouter = () => {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={LoginForm} />
         <Route path="/crud" component={CrudComponent} />
-        <Route path="/videocall" component={Videocall}/>
         <Route path="/videocalltest" component={Videocalltest}/>
-        <VideoCall/>
-        <Videocalltest/>
-        <Navg/>
-        <Dashboard/>
+        <Route path="/videocall" component={Videocall}/>
       </Switch>
     </Router>
   );
