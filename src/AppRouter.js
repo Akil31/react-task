@@ -13,10 +13,12 @@ const AppRouter = () => {
       <Switch>
         <Route exact path="/" component={LoginForm} />
         <Route path="/crud" component={CrudComponent} />
-        {/* <VideoCall/> */}
-        {/* <Videocalltest/>
+        <Route path="/videocall" component={Videocall}/>
+        <Route path="/videocalltest" component={Videocalltest}/>
+        <VideoCall/>
+        <Videocalltest/>
         <Navg/>
-        <Dashboard/> */}
+        <Dashboard/>
       </Switch>
     </Router>
   );
