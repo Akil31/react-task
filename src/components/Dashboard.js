@@ -1,15 +1,16 @@
 import React from 'react'
 import Navg from './Navg'
-import { Button } from 'bootstrap'
 import { useHistory } from 'react-router-dom';
 
 export default function Dashboard() {
     const history = useHistory();
-
+    const pathlink = () => {
+        history.push("/videocalltest");
+    };
     return (
         <>
             <Navg />
-            <div class="container-fluid bg">    
+            <div class="container-fluid bg">
                 <section class="container">
                     <div class="py-5">
                         <div class="mb-5">
@@ -30,7 +31,9 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                                 <div class="col-6 align-self-center text-end">
-                                    <button class="btn btn-green px-5 py-2" onClick={()=> history.push("/videocalltest")}>Connect</button>
+                                    <button class="btn btn-primary px-5 py-2"
+                                        onClick={() => pathlink("/videocalltest")}
+                                    >Connect</button>
                                 </div>
                             </div>
                         </div>

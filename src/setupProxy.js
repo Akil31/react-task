@@ -1,10 +1,13 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+import { createProxyMiddleware } from 'http-proxy-middleware';
 
-module.exports = function(app) {
+export default function (app) {
+  console.log("Setup proxy is ever called");
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://ahd.instapract.com/web',
+      target: 'https://ahd.instapract.ae/web', // Replace with your backend server URL
+      "secure": false,
+      "logLevel":"debug",
       changeOrigin: true,
     })
   );

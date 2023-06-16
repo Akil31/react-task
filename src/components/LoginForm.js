@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import apiService from '../core/apiService';
-// import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,7 +14,16 @@ const LoginForm = () => {
     console.log({ username, password });
 
     try {
-      const response = await apiService.login(username, password);
+      const response = await apiService.login(
+        {
+          username,
+          password,
+          device_id: "55c3389cb5ddd720dc0297617f3561c43a36218a277c974c8d43d545a643f45c",
+          os_id: "b93a9204-ee21-4cf9-8a94-cf5eeabf7301",
+          time_zone: "Asia/Calcutta",
+          role_id: "143f37f2-ca38-0ab1-2489-1e47113655fc",
+        }
+      );
       console.log(response.data); // Handle the successful login response
       sessionStorage.setItem('token', response.data.access_token);
       // sessionStorage.setItem('User_id', response.data.User.id);

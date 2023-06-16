@@ -1,16 +1,24 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://ahd.instapract.com/web/';
+const BASE_URL = '/api'; // This matches the proxy configuration in setupProxy.jsn';
 
 const apiService = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+    "Origin": "*",
+    "Access-Control-Allow-Origin":"*",
+    "Access-Control-Request-Method": "POST, GET, DELETE, PUT",
+    "Access-Control-Request-Headers": "*",
+    "APPID":"Gem3s12345",
+  },
 });
 
 const apiServiceInstance = {
   // Define your API service functions here
-  login: async (username, password) => {
+  login: async (User) => {
     try {
-      const response = await apiService.post('/api/default/login', { username, password });
+      const response = await apiService.post('/default/login', User);
       return response.data;
     } catch (error) {
       throw error;
@@ -25,7 +33,6 @@ const apiServiceInstance = {
       throw error;
     }
   },
-
   // Add more API service functions as needed
 };
 

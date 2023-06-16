@@ -1,17 +1,22 @@
 import React from "react";
 import Navg from "./Navg";
+import { useHistory } from 'react-router-dom';
 
 export default function Videocalltest() {
+        const history = useHistory();
+        const handleClick = () => {
+          history.push('/videocall');
+        };
+
     return (
         <>
-        <Navg/>
+            <Navg />
             <div class="container justify-content-center width">
                 <div class="text-start mb-2 mx-2">
                     <h5>Video Consultation</h5>
                 </div>
                 <div class="container">
                     <div class="card bg-dark" style={{ height: ' 175px' }}>
-
                     </div>
                     <div class="text-center">
                         <h5 class="pt-3">Please wait while we check your camera</h5>
@@ -57,7 +62,7 @@ export default function Videocalltest() {
                             Supported web browsers for this video consultation technology include the latest versions of google
                             chrome,Mozilla firefox</p>
 
-                        <button type="submit" class="btn btn-green btn-lg w-75 mb-4" routerLink="/videocall">Continue</button>
+                        <button type="submit" class="btn btn-primary btn-lg w-75 mb-4" onClick={handleClick}>Continue</button>
 
                     </div>
                 </div>
