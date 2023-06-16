@@ -17,9 +17,11 @@ const LoginForm = () => {
     try {
       const response = await apiService.login(username, password);
       console.log(response.data); // Handle the successful login response
-      const token = response.data.token; // Assuming the API returns a token upon successful login
-      sessionStorage.setItem('token', token); // Store the token in local storage
-      history.push('/crud'); // Navigate to the dashboard component
+      sessionStorage.setItem('token', response.data.access_token);
+      // sessionStorage.setItem('User_id', response.data.User.id);
+      // sessionStorage.setItem('username', response.data.User.username);
+      // sessionStorage.setItem('email', response.data.User.email);
+      history.push('/doctorlist'); // Navigate to the dashboard component
     } catch (error) {
       console.error(error); // Handle the login error
     }
@@ -48,8 +50,6 @@ const LoginForm = () => {
               <hr class="hr" style={{ border: '1px solid #257fac;' }} />
             </div>
             <form class="g3 needs-validation" onSubmit={handleSubmit}>
-
-
               <div class="form-floating mb-4">
                 <input type="text" id="form3Example3" formControlName="username"
                   class="form-control form-control-lg" placeholder="Enter a valid user name" onChange={(e) => setUsername(e?.currentTarget?.value)} />

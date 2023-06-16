@@ -1,8 +1,10 @@
 import React from "react";
+import Navg from "./Navg";
 
 export default function VideoCall() {
     return (
         <div>
+            <Navg/>
             <div class="container-fluid">
                 <div class="row d-flex">
                     <div class="col-12 col-md-8">

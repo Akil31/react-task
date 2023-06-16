@@ -1,9 +1,15 @@
 import React from 'react'
+import Navg from './Navg'
+import { Button } from 'bootstrap'
+import { useHistory } from 'react-router-dom';
 
 export default function Dashboard() {
+    const history = useHistory();
+
     return (
         <>
-            <div class="container-fluid bg">
+            <Navg />
+            <div class="container-fluid bg">    
                 <section class="container">
                     <div class="py-5">
                         <div class="mb-5">
@@ -14,17 +20,17 @@ export default function Dashboard() {
                                 <div class="col-6 text-start">
                                     <div class="row">
                                         <div class="col-2 mx-0 px-0 align-self-center">
-                                            <img src="" alt="mdo" width="45" height="45"
+                                            <img src="./images/video.png" alt="mdo" width="45" height="45"
                                                 class="rounded-pill mx-auto d-block me-3" />
                                         </div>
                                         <div class="col">
-                                            <span class="fs-5 me-3">jhhjjh <span class="">hghggh</span></span><br />
-                                            <span>sds</span>
+                                            <span class="fs-5 me-3"> <span class=""></span></span><br />
+                                            <span></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6 align-self-center text-end">
-                                    <button class="btn btn-green px-5 py-2" routerLink="/videocheck">Connect</button>
+                                    <button class="btn btn-green px-5 py-2" onClick={()=> history.push("/videocalltest")}>Connect</button>
                                 </div>
                             </div>
                         </div>

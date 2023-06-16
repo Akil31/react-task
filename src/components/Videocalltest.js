@@ -1,8 +1,10 @@
 import React from "react";
+import Navg from "./Navg";
 
 export default function Videocalltest() {
     return (
         <>
+        <Navg/>
             <div class="container justify-content-center width">
                 <div class="text-start mb-2 mx-2">
                     <h5>Video Consultation</h5>
