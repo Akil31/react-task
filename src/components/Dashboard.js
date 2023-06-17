@@ -31,9 +31,9 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                                 <div class="col-6 align-self-center text-end">
-                                    <button class="btn btn-primary px-5 py-2"
+                                    <a href="/videocalltest" type='button' class="btn btn-primary px-5 py-2"
                                         onClick={() => pathlink("/videocalltest")}
-                                    >Connect</button>
+                                    >Connect</a>
                                 </div>
                             </div>
                         </div>

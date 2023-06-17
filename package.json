@@ -15,7 +15,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "proxy": "https://ahd.instapract.ae/web"
+    "proxy": "https://ahd.instapract.com/web/api/default/login"
   },
   "scripts": {
     "start": "react-scripts start --proxy-config proxy.conf.json",

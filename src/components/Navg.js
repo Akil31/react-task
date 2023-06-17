@@ -17,7 +17,7 @@ export default function Navg() {
                 </div>
               </div>
             </li>
-            <li class="nav-item"><i class="fa fa-power-off" aria-hidden="true"></i><i class="bi bi-power fs-2"></i></li>
+            <li class="nav-item"> <a href="/"><i class="fa fa-power-off" aria-hidden="true"></i><i class="bi bi-power fs-2"></i></a></li>
           </ul>
         </header>
       </div>
