@@ -4,24 +4,18 @@ import LoginForm from './components/LoginForm';
 import Videocalltest from './components/Videocalltest';
 import Videocall from './components/Videocall';
 import Dashboard from './components/Dashboard';
-import { Routes } from 'react-router';
-const AppRouter = () => {
+
+const App = () => {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={LoginForm} />
-        <Route path="/doctorlist" component={Dashboard}>
-          <Dashboard/>
-        </Route>
-        <Route exact path="/videocalltest" component={Videocalltest}>
-          <Videocalltest/>
-          </Route>
-        <Route exact path="/videocall" component={Videocall}>
-          <Videocall/>
-          </Route>
+        <Route path="/doctorlist" component={Dashboard} />
+        <Route exact path="/videocalltest" component={Videocalltest} />
+        <Route exact path="/videocall" component={Videocall} />
       </Switch>
     </BrowserRouter>
   );
 };
 
-export default AppRouter;
+export default App;
