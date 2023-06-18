@@ -1,10 +1,9 @@
+
 {
-    "/api": {
-      "target": "https://ahd.instapract.com/web/api/default/login",
-      "secure": false,
-      "changeOrigin": true
-    }
-  }  
-
-
-  
+  "/api/*": {
+    "target": "https://ahd.instapract.ae/web",
+    "secure": false,
+    "logLevel":"debug",
+    "changeOrigin": true
+  }
+}

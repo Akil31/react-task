@@ -1,24 +1,24 @@
-import axios from 'axios';
+// import axios from 'axios';
+import tokenInterceptor from './tokenInterceptor';
 
-const BASE_URL = '/api'; // This matches the proxy configuration in setupProxy.jsn';
-
-const apiService = axios.create({
-  baseURL: BASE_URL,
-  headers: {
-    'Content-Type': 'application/json',
-    "Origin": "*",
-    "Access-Control-Allow-Origin":"*",
-    "Access-Control-Request-Method": "POST, GET, DELETE, PUT",
-    "Access-Control-Request-Headers": "*",
-    "APPID":"Gem3s12345",
-  },
-});
+const api = tokenInterceptor();
 
 const apiServiceInstance = {
   // Define your API service functions here
   login: async (User) => {
     try {
-      const response = await apiService.post('/default/login', User);
+      const response = await api.post('/api/default/login', User,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          "APPID": "APPQUEOY6M",
+          "lang": "da315627-3ece-2016-c628-b61dc5ee9be0",
+          "Access-Control-Allow-Headers":"*",
+          "Access-Control-Allow-Origin":"*",
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Methods":"POST"
+        },
+      });
       return response.data;
     } catch (error) {
       throw error;
@@ -27,7 +27,7 @@ const apiServiceInstance = {
 
   getUsers: async () => {
     try {
-      const response = await apiService.get('/users');
+      const response = await api.post('/api/doctor/doc-list',sessionStorage.getItem('User_id'));
       return response.data;
     } catch (error) {
       throw error;
